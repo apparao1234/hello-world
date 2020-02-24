@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import FragmentDemoApproach2 from "./components/FragmentDemoApproach2";
+import ParentCompRegular from "./components/ParentCompRegular";
 
 class App extends Component {
   render() {
-    return <div className='App'>{<FragmentDemoApproach2 />}</div>;
+    return <div className='App'>{<ParentCompRegular />}</div>;
   }
 }
 
