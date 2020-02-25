@@ -1,7 +1,7 @@
 import React from "react";
 //Updated component accepts a component as input.Here OriginalComponent is parameter
-const UpdatedComponent = OriginalComponent => {
-  class NewComponent extends React.Component {
+const withCounter = WrapperComponent => {
+  class WithCounter extends React.Component {
     constructor(props) {
       super(props);
 
@@ -18,13 +18,13 @@ const UpdatedComponent = OriginalComponent => {
     //sending two parameters to OriginalComponent.These can be destructured in the respective/input component.
     render() {
       return (
-        <OriginalComponent
+        <WrapperComponent
           count={this.state.count}
           incrementCount={this.incrementCount}
-        ></OriginalComponent>
+        ></WrapperComponent>
       );
     }
   }
-  return NewComponent;
+  return WithCounter;
 };
-export default UpdatedComponent;
+export default withCounter;
