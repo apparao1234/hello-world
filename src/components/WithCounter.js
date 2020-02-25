@@ -17,10 +17,12 @@ const withCounter = WrapperComponent => {
     };
     //sending two parameters to OriginalComponent.These can be destructured in the respective/input component.
     render() {
+      console.log(this.props.name);
       return (
         <WrapperComponent
           count={this.state.count}
           incrementCount={this.incrementCount}
+          {...this.props}
         ></WrapperComponent>
       );
     }
