@@ -2,11 +2,17 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import ParentComponentMemo from "./components/ParentComponentMemo";
+import ClickCounter from "./components/ClickCounter";
+import HoverCounter from "./components/HoverCounter";
 
 class App extends Component {
   render() {
-    return <div className='App'>{<ParentComponentMemo />}</div>;
+    return (
+      <div className='App'>
+        <ClickCounter />
+        <HoverCounter />
+      </div>
+    );
   }
 }
 
