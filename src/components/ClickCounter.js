@@ -1,28 +1,17 @@
 import React, { Component } from "react";
+import UpdatedComponent from "./WithCounter";
 
 class ClickCounter extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      count: 0
-    };
-  }
-  // As set state method required prev state, we must pass function  with previous state and increase the count
-  incrementCount = () => {
-    this.setState(prevState => {
-      return { count: prevState.count + 1 };
-    });
-  };
-
   render() {
-    const { count } = this.state;
+    //destructuring properties.The count and incrementCount sent as parameters with OriginalComponent tag
+    const { count, incrementCount } = this.props;
     return (
       <div>
-        <button onClick={this.incrementCount}> Clicked {count} times</button>
+        <button onClick={incrementCount}> Clicked {count} times</button>
       </div>
     );
   }
 }
-
-export default ClickCounter;
+//Updated component accepts a component.Here ClickCounter is input component
+//Here the Original component is ClickCounter
+export default UpdatedComponent(ClickCounter);
