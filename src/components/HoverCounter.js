@@ -14,4 +14,4 @@ class HoverCounter extends Component {
 }
 //Updated component accepts a component.Here HoverCounter is input component
 //Here the Original component is HoverCounter
-export default withCounter(HoverCounter);
+export default withCounter(HoverCounter, 20);
