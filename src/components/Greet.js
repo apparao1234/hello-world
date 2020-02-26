@@ -8,6 +8,7 @@ const Greet = props => {
       <h1>
         Hello {name} and your hero name is {heroName}
       </h1>
+      {props.children}
     </div>
   );
 };
