@@ -15,12 +15,12 @@ class ClickCounter extends Component {
   render() {
     //destructuring properties.The count and incrementCount sent as parameters with OriginalComponent tag
     console.log("ClickCounter render() method");
-    const { count, incrementCount } = this.props;
+    const { count, incrementCount, name } = this.props;
     console.log("ClickCounter Count value" + count);
     return (
       <div>
         <button onClick={incrementCount}>
-          {this.props.name} Clicked {count} times
+          {name} Clicked {count} times
         </button>
       </div>
     );

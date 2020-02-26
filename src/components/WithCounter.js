@@ -18,8 +18,8 @@ const withCounter = (WrapperComponent, incrementNumber) => {
     }
     // As set state method required prev state, we must pass function  with previous state and increase the count
     incrementCount = () => {
-      this.setState(prevState => {
-        return { count: prevState.count + incrementNumber };
+      this.setState(x => {
+        return { count: x.count + incrementNumber };
       });
     }; //sending two parameters to OriginalComponent.These can be destructured in the respective/input component.
     render() {
