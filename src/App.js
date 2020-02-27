@@ -9,9 +9,9 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <UserProvider value='karunya'>
-          <ComponentC />
-        </UserProvider>
+        {/* <UserProvider value='karunya'> */}
+        <ComponentC />
+        {/* </UserProvider> */}
       </div>
     );
   }
